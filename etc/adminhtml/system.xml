@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+    Copyright © 2026 Roman Pasichnyk
+    SPDX-License-Identifier: OSL-3.0 OR AFL-3.0
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="zero_seo" translate="label" type="text" sortOrder="96" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>SEO</label>
+            <tab>zero</tab>
+            <resource>Zero_Seo::config</resource>
+            <group id="general" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Search Engines</label>
+                <comment><![CDATA[Canonical links for products and categories are Magento's own: Catalog &gt; Catalog &gt; Search Engine Optimization (on by default with Zero).]]></comment>
+                <field id="structured_data" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Structured Data</label>
+                    <comment>schema.org JSON-LD: products with price, currency, stock and rating (Google's rich results), breadcrumbs, the store and its search on the home page.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="hreflang" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>hreflang Links</label>
+                    <comment>In a store with more than one language (store views of one store): each page names its other-language versions, so search engines show people the one in their language.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="meta_description" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Meta Description Fallback</label>
+                    <comment>A product or category without its own Meta Description gets the start of its description (about 160 characters).</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

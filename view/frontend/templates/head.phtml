@@ -1,0 +1,20 @@
+<?php
+/**
+ * Copyright © 2026 Roman Pasichnyk
+ * SPDX-License-Identifier: OSL-3.0 OR AFL-3.0
+ *
+ * schema.org JSON-LD (data, not script: the strict CSP doesn't apply) and
+ * hreflang links. ViewModel\Head.
+ *
+ * @var \Magento\Framework\View\Element\Template $block
+ * @var \Magento\Framework\Escaper $escaper
+ * @var \Zero\Seo\ViewModel\Head $seo
+ */
+$seo = $block->getData('seo');
+?>
+<?php foreach ($seo->getAlternates() as $link): ?>
+<link rel="alternate" hreflang="<?= $escaper->escapeHtmlAttr($link['hreflang']) ?>" href="<?= $escaper->escapeUrl($link['href']) ?>">
+<?php endforeach; ?>
+<?php foreach ($seo->getStructuredData() as $json): ?>
+<script type="application/ld+json"><?= /* @noEscape */ $json ?></script>
+<?php endforeach; ?>

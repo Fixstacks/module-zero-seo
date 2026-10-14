@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+    Copyright © 2026 Roman Pasichnyk
+    SPDX-License-Identifier: OSL-3.0 OR AFL-3.0
+
+    Magento's canonical links for products and categories, on by default here
+    (Magento ships them off): one URL per product whatever category it was
+    reached from.
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <catalog>
+            <seo>
+                <product_canonical_tag>1</product_canonical_tag>
+                <category_canonical_tag>1</category_canonical_tag>
+            </seo>
+        </catalog>
+        <zero_seo>
+            <general>
+                <structured_data>1</structured_data>
+                <hreflang>1</hreflang>
+                <meta_description>1</meta_description>
+            </general>
+        </zero_seo>
+    </default>
+</config>

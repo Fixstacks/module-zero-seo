@@ -1,0 +1,44 @@
+{
+    "name": "fixstacks/module-zero-seo",
+    "description": "Zero for Magento Open Source: structured data (schema.org JSON-LD), hreflang, canonical URLs and meta descriptions.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Roman Pasichnyk"
+        }
+    ],
+    "homepage": "https://fixstacks.com/zero",
+    "keywords": [
+        "magento",
+        "magento2",
+        "magento-open-source",
+        "zero",
+        "seo",
+        "structured-data",
+        "hreflang"
+    ],
+    "require": {
+        "php": "~8.2.0||~8.3.0||~8.4.0",
+        "magento/framework": "103.0.*",
+        "magento/module-backend": "*",
+        "magento/module-catalog": "*",
+        "magento/module-config": "*",
+        "magento/module-configurable-product": "*",
+        "magento/module-review": "*",
+        "magento/module-store": "*",
+        "fixstacks/module-zero-core": "^1.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Zero\\Seo\\": ""
+        }
+    }
+}
