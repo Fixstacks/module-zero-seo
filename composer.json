@@ -2,7 +2,7 @@
     "name": "fixstacks/module-zero-seo",
     "description": "Zero for Magento Open Source: structured data (schema.org JSON-LD), hreflang, canonical URLs and meta descriptions.",
     "type": "magento2-module",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
@@ -31,7 +31,7 @@
         "magento/module-configurable-product": "*",
         "magento/module-review": "*",
         "magento/module-store": "*",
-        "fixstacks/module-zero-core": "^1.2"
+        "fixstacks/module-zero-core": "^1.3"
     },
     "autoload": {
         "files": [
