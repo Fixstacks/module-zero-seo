@@ -1,4 +1,4 @@
-# fixstacks/module-zero-seo — licensing
+# zerofront/module-zero-seo — licensing
 
 Copyright © 2026 Roman Pasichnyk.
 
